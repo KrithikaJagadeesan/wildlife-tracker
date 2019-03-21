@@ -1,0 +1,11 @@
+<h1>Welcome to Wildlife Tracker</h1>
+<%= link_to 'Submit New Animal', new_animal_path %>
+<ul>
+    <% if @animals %>
+     <% @animals.each do |animal| %>
+         <li> <%= animal.name %>  <%= link_to "Edit", edit_animal_path(animal) %>  <%= link_to 'Delete', animal_path(animal), method: :delete %> </li>
+     <% end %>
+     <% end %> 
+    
+</ul>
+
